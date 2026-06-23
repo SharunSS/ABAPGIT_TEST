@@ -1,0 +1,14 @@
+unmanaged implementation in class zbp_i_test_pur unique;
+strict ( 2 );
+
+define behavior for ZI_TEST_PUR //alias <alias_name>
+//persistent table <???>
+lock master
+authorization master ( instance )
+//etag master <field_name>
+{
+  create ( authorization : global );
+  update;
+  delete;
+  field ( readonly ) PurchaseOrder, PurchaseOrderItem;
+}

@@ -1,0 +1,31 @@
+@Metadata.layer: #CORE
+@UI.headerInfo: {
+	typeName: 'Test Consumption',
+	title: { value: 'PurchaseOrder' },
+	description: { value: 'PurchaseOrderItem' }
+}
+
+annotate view ZC_TEST_PUR with
+{
+	@UI.lineItem: [{ position: 10 }]
+	@UI.selectionField: [{ position: 10 }]
+	PurchaseOrder;
+
+	@UI.lineItem: [{ position: 20 }]
+	PurchaseOrderItem;
+
+	@UI.lineItem: [{ position: 30 }]
+	Material;
+
+	@EndUserText.label: 'Purchase Order Date'
+	@UI.lineItem: [{ position: 40 }]
+	@UI.selectionField: [{ position: 20 }]
+	PurchaseOrderDate;
+
+	@EndUserText.label: 'Supplier'
+	@UI.lineItem: [{ position: 50 }]
+	@UI.selectionField: [{ position: 30 }]
+	Supplier;
+
+
+}
